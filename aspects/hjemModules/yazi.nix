@@ -1,5 +1,5 @@
 {
-  modules.core = 
+  modules.core =
     {
       self',
       config,
@@ -23,7 +23,7 @@
       cfg = config.my.yazi;
     in
     {
-      config = lib.mkIf (cfg.enable) (
+      config = lib.mkIf (config.my.yazi.enable) (
         lib.mkMerge [
           {
             hj.packages = [ cfg.package ];
@@ -61,6 +61,8 @@
       );
 
       options.my.yazi = {
+        enable = lib.mkEnableOption { };
+
         package = mkOption {
           type = types.package;
           default = wrapPackage (
@@ -127,8 +129,6 @@
             }
           );
         };
-
-        enable = lib.mkEnableOption { };
 
         initLua = mkOption {
           type = with types; nullOr (either path lines);
