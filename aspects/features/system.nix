@@ -23,6 +23,12 @@
         "root"
         "@wheel"
       ];
+
+      experimental-features = [
+        "pipe-operators"
+        "nix-command"
+        "flakes"
+      ];
     };
   };
 }
