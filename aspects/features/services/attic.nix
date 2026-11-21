@@ -26,9 +26,7 @@
   modules.features.desktop = {
     nix.settings = {
       trusted-substituters = [ "https://cache.wyspr.xyz/main" ];
-      trusted-public-keys = [
-        "main:Rz328YhW+fhUPvBBhMyJyaF6XVOTh5oAzMKr0RO3ySQ="
-      ];
+      extra-trusted-public-keys = [ "main:Rz328YhW+fhUPvBBhMyJyaF6XVOTh5oAzMKr0RO3ySQ=" ];
     };
   };
 }

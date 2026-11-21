@@ -161,7 +161,7 @@
 
           debug = lib.mkOption {
             type = lib.types.bool;
-            default = false;
+            default = true;
             readOnly = true;
           };
         };
@@ -269,7 +269,7 @@
 
   nixConfig = {
     trusted-substituters = [ "https://cache.wyspr.xyz/main" ];
-    trusted-public-keys = [ "main:Rz328YhW+fhUPvBBhMyJyaF6XVOTh5oAzMKr0RO3ySQ=" ];
+    extra-trusted-public-keys = [ "main:Rz328YhW+fhUPvBBhMyJyaF6XVOTh5oAzMKr0RO3ySQ=" ];
     experimental-features = [
       "pipe-operators"
       "nix-command"
