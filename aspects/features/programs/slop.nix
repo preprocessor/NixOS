@@ -1,13 +1,9 @@
 {
-  modules.host.ramiel = { wrapPackage, pkgs, ... }: {
+  modules.host.ramiel = { pkgs, ... }: {
     hj.packages = with pkgs; [
       worktrunk
       opencode
-
-      (wrapPackage {
-        package = omp;
-        runtimePackages = [ python3 ];
-      })
+      pi-coding-agent
     ];
   };
 }
