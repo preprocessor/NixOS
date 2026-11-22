@@ -1,6 +1,9 @@
 {
   modules.host.xyz =
     { config, pkgs, ... }:
+    let
+      cfg = config.services.atticd;
+    in
     {
       my.services.attic-ui = {
         enable = true;
@@ -10,7 +13,7 @@
         settings = {
           subtitle = "wyspr's Nix Binary Cache";
           footer = "wyspr.xyz";
-          defaultEndpoint = "https://cache.wyspr.xyz";
+          defaultEndpoint = cfg.settings."api-endpoint";
           defaultCache = "main";
           upstreamFallback = true;
           publicKeys.main = "main:Rz328YhW+fhUPvBBhMyJyaF6XVOTh5oAzMKr0RO3ySQ=";
@@ -48,7 +51,7 @@
         enableACME = true;
         forceSSL = true;
         locations."/" = {
-          proxyPass = "http://${config.services.atticd.settings.listen}";
+          proxyPass = "http://${cfg.settings.listen}";
           extraConfig = ''
             proxy_request_buffering off;
 

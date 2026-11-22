@@ -7,6 +7,9 @@
       lib,
       ...
     }:
+    let
+      cfg = config.services.forgejo;
+    in
     {
       services.forgejo = {
         enable = true;
@@ -43,13 +46,11 @@
         };
       };
 
-      services.nginx.virtualHosts."git.wyspr.xyz" = {
+      services.nginx.virtualHosts.${cfg.settings.server.DOMAIN} = {
         enableACME = true;
         forceSSL = true;
         locations."/" = {
-          proxyPass =
-            with config.services.forgejo.settings.server;
-            "http://${HTTP_ADDR}:${toString HTTP_PORT}";
+          proxyPass = "http://${cfg.settings.server.HTTP_ADDR}:${toString cfg.settings.server.HTTP_PORT}";
           proxyWebsockets = true;
         };
       };
@@ -58,16 +59,14 @@
       users.users.git = {
         isSystemUser = true;
         group = "git";
-        home = "/var/lib/forgejo";
+        home = cfg.stateDir;
         useDefaultShell = true;
       };
 
-      environment.systemPackages = [ config.services.forgejo.package ];
+      environment.systemPackages = [ cfg.package ];
 
       systemd.tmpfiles.settings."forgejo-files" =
         let
-          cfg = config.services.forgejo;
-
           icon = pkgs.fetchurl {
             url = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg";
             sha256 = "sha256-EIClQw7bYnjcA+SwTvwWyL7VuUNAjWSK1yGiiDaBQiA=";
