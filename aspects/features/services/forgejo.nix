@@ -1,10 +1,4 @@
 {
-  tack.inputs.melosso = {
-    url = "gh:melosso/forgejo-theme-melosso";
-    type = "fetch";
-    frozen = true;
-  };
-
   modules.host.xyz =
     {
       inputs,
