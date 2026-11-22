@@ -10,6 +10,7 @@
     "equicord": "github:Equicord/Equicord",
     "extra-metadata": "github:boydaihungst/file-extra-metadata.yazi",
     "fish-completion-sync": "github:iynaix/fish-completion-sync",
+    "forgejo-terminal-theme": "git+https://codeberg.org/ivanhercaz/forgejo-terminal-theme.git",
     "fragment-mono": "github:dtinth/fragment-mono-weights",
     "gist-nvim": "github:rawnly/gist.nvim",
     "helium": "github:amaanq/helium-flake",
@@ -135,6 +136,14 @@
     "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
     "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
     "lastModified": 1731533236
+  },
+  "forgejo-terminal-theme": {
+    "type": "git",
+    "url": "https://codeberg.org/ivanhercaz/forgejo-terminal-theme.git",
+    "ref": "HEAD",
+    "rev": "f32dab9f462eaa4fa81281b51495a8498a1822be",
+    "narHash": "sha256-M9aGXmlngj6QcXSy3O4Jxz20b6PTv6PSENoBlMwqPJE=",
+    "lastModified": 1783819597
   },
   "fragment-mono": {
     "type": "github",
