@@ -269,3 +269,7 @@ through `modules.core`, usually by setting `hj.packages`, `hj.xdg.config.files`,
 │   └── features/              # where modules.features are defined
 └── .tack/                     # pins.toml and patches
 ```
+
+<div align="center">
+    <img src="https://count.timeworn.net/wyspr-readme-view-count?theme=rule34&padding=1&align=bottom&pixelated=0" alt="wyspr-readme-view-count" />
+</div>
