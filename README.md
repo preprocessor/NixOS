@@ -271,5 +271,5 @@ through `modules.core`, usually by setting `hj.packages`, `hj.xdg.config.files`,
 ```
 
 <div align="center">
-    <img src="https://count.timeworn.net/wyspr-readme-view-count?theme=rule34&padding=1&align=bottom&pixelated=0" alt="wyspr-readme-view-count" />
+    <img src="https://count.timeworn.net/wyspr-readme-view-count?theme=rule34&padding=1&align=bottom&pixelated=0&darkmode=light" alt="wyspr-readme-view-count" />
 </div>
