@@ -26,14 +26,14 @@
 
           postPatch =
             let
-              index = builtins.fetchurl {
+              index = pkgs.fetchurl {
                 url = "https://raw.githubusercontent.com/P3DROVFX/ii-p3drovfx/refs/heads/dev/dots/.config/quickshell/ii/scripts/discordVoice/vencord-companion/index.ts";
-                sha256 = "sha256:09b51i1m25yraxhipihncrck8lzhdadjcxn6b6h6xsa39r2zk0g1";
+                sha256 = "sha256-4YH5RU5D6W6gWcZ2Jptq8FM0WWYWxhthV9kXUUMMZSU=";
               };
 
-              native = builtins.fetchurl {
+              native = pkgs.fetchurl {
                 url = "https://raw.githubusercontent.com/P3DROVFX/ii-p3drovfx/refs/heads/dev/dots/.config/quickshell/ii/scripts/discordVoice/vencord-companion/native.ts";
-                sha256 = "sha256:1wxbm9878avkhxm8qzc79amm81mxkgq4j9s4ln4nm44f4glx7gig";
+                sha256 = "sha256-L77T6SOOkGqJpUQnSfCbvQZUq0qHfYxqh3MrdFCqq/M=";
               };
             in
             # bash
