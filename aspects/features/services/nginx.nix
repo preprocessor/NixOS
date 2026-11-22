@@ -1,6 +1,6 @@
 {
   modules.host.xyz =
-    { pkgs, ... }:
+    { config, pkgs, ... }:
     {
       services.nginx = {
         enable = true;
@@ -14,12 +14,31 @@
         clientMaxBodySize = "0";
         recommendedProxySettings = true;
         recommendedTlsSettings = true;
+        recommendedOptimisation = true;
+        recommendedGzipSettings = true;
         virtualHosts = {
+          # Catch-all for requests that name no vhost: a bare IP, an unknown Host
+          # header, or an SNI nothing here serves. Without this nginx answers such
+          # requests with the alphabetically-first server block.
+          # TLS handshakes for unknown names are rejected before
+          # a certificate is sent, and plain-HTTP requests get 444 (connection
+          # closed, no response). fail2ban's nginx-deny jail below counts 444s.
+          "catch-all" = {
+            serverName = "_";
+            default = true;
+            rejectSSL = true;
+            extraConfig = ''
+              return 444;
+            '';
+          };
+
           "git.wyspr.xyz" = {
             enableACME = true;
             forceSSL = true;
             locations."/" = {
-              proxyPass = "http://127.0.0.1:3000";
+              proxyPass =
+                with config.services.forgejo.settings.server;
+                "http://${HTTP_ADDR}:${toString HTTP_PORT}";
               proxyWebsockets = true;
             };
           };
@@ -27,7 +46,7 @@
             enableACME = true;
             forceSSL = true;
             locations."/" = {
-              proxyPass = "http://127.0.0.1:8080";
+              proxyPass = "http://${config.services.atticd.settings.listen}";
               extraConfig = "proxy_request_buffering off;";
             };
           };
