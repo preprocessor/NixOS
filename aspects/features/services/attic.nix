@@ -44,6 +44,28 @@
         };
       };
 
+      services.nginx.virtualHosts."cache.wyspr.xyz" = {
+        enableACME = true;
+        forceSSL = true;
+        locations."/" = {
+          proxyPass = "http://${config.services.atticd.settings.listen}";
+          extraConfig = ''
+            proxy_request_buffering off;
+
+            # attic-ui is served from a different origin; browsers block its
+            # fetch of /main/nix-cache-info and .narinfo files without CORS.
+            # Scope the allowance to the UI origin and answer the preflight
+            # that an optional bearer token triggers (atticd only does GET/HEAD).
+            add_header Access-Control-Allow-Origin "https://attic.wyspr.xyz" always;
+            add_header Access-Control-Allow-Methods "GET, HEAD, OPTIONS" always;
+            add_header Access-Control-Allow-Headers "Authorization" always;
+            if ($request_method = OPTIONS) {
+              return 204;
+            }
+          '';
+        };
+      };
+
       sops.templates."atticd.env".content = ''
         ATTIC_SERVER_TOKEN_RS256_SECRET_BASE64=${config.sops.placeholder.attic_rs256_secret}
       '';

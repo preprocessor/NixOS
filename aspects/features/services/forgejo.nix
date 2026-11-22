@@ -43,6 +43,17 @@
         };
       };
 
+      services.nginx.virtualHosts."git.wyspr.xyz" = {
+        enableACME = true;
+        forceSSL = true;
+        locations."/" = {
+          proxyPass =
+            with config.services.forgejo.settings.server;
+            "http://${HTTP_ADDR}:${toString HTTP_PORT}";
+          proxyWebsockets = true;
+        };
+      };
+
       users.groups.git = { };
       users.users.git = {
         isSystemUser = true;
@@ -90,7 +101,6 @@
               dest = "${cfg.customDir}/public/assets/img/favicon.svg";
             }
           ];
-
         in
         (lib.genAttrs dirs (_: {
           d = {
