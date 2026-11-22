@@ -6,14 +6,12 @@
 
   wyspr's flake
 
-  <img alt="Latest Commit" src="https://img.shields.io/gitea/last-commit/preprocessor/NixOS?gitea_url=https%3A%2F%2Fgit.wyspr.xyz%2F&style=for-the-badge&logo=Git&logoColor=F03C2E&label=Latest%20Commit&labelColor=141D28&color=F03C2E">
-
-  <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/preprocessor/NixOS/cache.yml?style=for-the-badge&logo=GitHub&label=Remote%20Build&labelColor=141D28&color=4F4">
-
-  <img alt="nixpkgs" src="https://img.shields.io/badge/NIXPKGS-UNSTABLE-4D6FB7?style=for-the-badge&logo=NixOS&logoColor=91D7E3&logoSize=auto&labelColor=141D28">
-
-  <img alt="Static Badge" src="https://img.shields.io/badge/License-AGPL3-DA643B?style=for-the-badge&logo=Unlicense&logoColor=DA643B&labelColor=141D28">
-
+  <div>
+    <img alt="Latest Commit" src="https://img.shields.io/gitea/last-commit/preprocessor/NixOS?gitea_url=https%3A%2F%2Fgit.wyspr.xyz%2F&style=for-the-badge&logo=Git&logoColor=F03C2E&label=Latest%20Commit&labelColor=141D28&color=F03C2E">
+    <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/preprocessor/NixOS/cache.yml?style=for-the-badge&logo=GitHub&label=Remote%20Build&labelColor=141D28&color=4F4">
+    <img alt="nixpkgs" src="https://img.shields.io/badge/NIXPKGS-UNSTABLE-4D6FB7?style=for-the-badge&logo=NixOS&logoColor=91D7E3&logoSize=auto&labelColor=141D28">
+    <img alt="Static Badge" src="https://img.shields.io/badge/License-AGPL3-DA643B?style=for-the-badge&logo=Unlicense&logoColor=DA643B&labelColor=141D28">
+  </div>
 </h1>
 
 > A modular multi-host NixOS configuration.
