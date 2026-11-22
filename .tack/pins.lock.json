@@ -1,5 +1,6 @@
 {
   "$declared": {
+    "attic-ui": "github:kleinbem-dev/attic-ui",
     "bat-syntax-justfile": "github:nk9/just_sublime",
     "cade": "github:manic-systems/cade",
     "chicago-font": "github:nikdog/chicago-font",
@@ -40,6 +41,15 @@
     "yazi-plugin-cbz": "github:AminurAlam/yazi-plugins",
     "yazi-plugins": "github:yazi-rs/plugins",
     "yaziline": "github:llanosrocas/yaziline.yazi"
+  },
+  "attic-ui": {
+    "type": "github",
+    "owner": "kleinbem-dev",
+    "repo": "attic-ui",
+    "rev": "5faf21dbb375e01d6ec2611cc6aa12ddcdc2ba5e",
+    "narHash": "sha256-W/i6QAxqYPrunDNwSZyWB6mYJJcyTHt5RUpoOsMiHfs=",
+    "lastModified": 1795320903,
+    "public": true
   },
   "bat-syntax-justfile": {
     "type": "github",

@@ -12,6 +12,10 @@ applefont = "https://devimages-cdn.apple.com/design/resources/download/{path}.dm
 gh = "github:{path}"
 nixpkgs = "github:NixOS/nixpkgs/nixpkgs-{path}"
 
+[inputs.attic-ui]
+url = "gh:kleinbem-dev/attic-ui"
+group = "nix"
+
 [inputs.bat-syntax-justfile]
 url = "gh:nk9/just_sublime"
 frozen = true

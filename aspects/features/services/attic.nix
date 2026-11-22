@@ -2,6 +2,34 @@
   modules.host.xyz =
     { config, pkgs, ... }:
     {
+      my.services.attic-ui = {
+        enable = true;
+
+        domain = "attic.wyspr.xyz";
+
+        settings = {
+          subtitle = "wyspr's Nix Binary Cache";
+          footer = "wyspr.xyz";
+          defaultEndpoint = "https://cache.wyspr.xyz";
+          defaultCache = "main";
+          upstreamFallback = true;
+          publicKeys.main = "main:Rz328YhW+fhUPvBBhMyJyaF6XVOTh5oAzMKr0RO3ySQ=";
+          specs."Cache" = "Attic";
+          presets = [
+            {
+              label = "cache.wyspr.xyz";
+              endpoint = "https://cache.wyspr.xyz";
+              cacheName = "main";
+            }
+            {
+              label = "cache.nixos.org";
+              endpoint = "https://cache.nixos.org";
+              cacheName = "";
+            }
+          ];
+        };
+      };
+
       services.atticd = {
         enable = true;
         environmentFile = config.sops.templates."atticd.env".path;
