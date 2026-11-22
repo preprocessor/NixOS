@@ -18,7 +18,6 @@
   modules.host.xyz = {
     networking = {
       useDHCP = false;
-      enableIPv6 = false;
 
       defaultGateway = "147.93.176.1";
 
