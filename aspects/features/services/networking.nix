@@ -17,26 +17,17 @@
 
   modules.host.xyz = {
     networking = {
-      defaultGateway = "147.93.176.1";
-      interfaces."eth0".useDHCP = false;
       useDHCP = false;
+      enableIPv6 = false;
 
-      defaultGateway6 = {
-        address = "fe80::1";
-        interface = "eth0";
-      };
+      defaultGateway = "147.93.176.1";
+
+      interfaces."eth0".useDHCP = false;
 
       interfaces."eth0".ipv4.addresses = [
         {
           address = "147.93.189.239";
           prefixLength = 20;
-        }
-      ];
-
-      interfaces."eth0".ipv6.addresses = [
-        {
-          address = "2605:a144:2376:929::1";
-          prefixLength = 64;
         }
       ];
     };
