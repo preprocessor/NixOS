@@ -10,6 +10,7 @@
       inputs,
       config,
       pkgs,
+      lib,
       ...
     }:
     {
@@ -58,27 +59,55 @@
 
       environment.systemPackages = [ config.services.forgejo.package ];
 
-      systemd.tmpfiles.rules =
+      systemd.tmpfiles.settings."forgejo-files" =
         let
           cfg = config.services.forgejo;
+
           icon = pkgs.fetchurl {
             url = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg";
             sha256 = "sha256-EIClQw7bYnjcA+SwTvwWyL7VuUNAjWSK1yGiiDaBQiA=";
           };
-        in
-        [
-          "d '${cfg.customDir}' 0750 ${cfg.user} ${cfg.group} - -"
-          "d '${cfg.customDir}/public' 0750 ${cfg.user} ${cfg.group} - -"
-          "d '${cfg.customDir}/public/assets' 0750 ${cfg.user} ${cfg.group} - -"
-          "d '${cfg.customDir}/public/assets/css' 0750 ${cfg.user} ${cfg.group} - -"
-          "d '${cfg.customDir}/public/assets/img' 0750 ${cfg.user} ${cfg.group} - -"
-          "d '${cfg.customDir}/templates' 0750 ${cfg.user} ${cfg.group} - -"
-          "d '${cfg.customDir}/templates/custom' 0750 ${cfg.user} ${cfg.group} - -"
 
-          "L+ '${cfg.customDir}/public/assets/css/theme-terminal.css' - - - - ${inputs.forgejo-terminal-theme}/theme-terminal.css"
-          "L+ '${cfg.customDir}/templates/custom/footer.tmpl' - - - - ${inputs.forgejo-terminal-theme}/footer.tmpl"
-          "L+ '${cfg.customDir}/public/assets/img/logo.svg' - - - - ${icon}"
-          "L+ '${cfg.customDir}/public/assets/img/favicon.svg' - - - - ${icon}"
-        ];
+          dirs = [
+            "${cfg.customDir}"
+            "${cfg.customDir}/public"
+            "${cfg.customDir}/public/assets"
+            "${cfg.customDir}/public/assets/css"
+            "${cfg.customDir}/public/assets/img"
+            "${cfg.customDir}/templates"
+            "${cfg.customDir}/templates/custom"
+          ];
+
+          files = [
+            {
+              src = "${inputs.forgejo-terminal-theme}/theme-terminal.css";
+              dest = "${cfg.customDir}/public/assets/css/theme-terminal.css";
+            }
+            {
+              src = "${inputs.forgejo-terminal-theme}/footer.tmpl";
+              dest = "${cfg.customDir}/templates/custom/footer.tmpl";
+            }
+            {
+              src = "${icon}";
+              dest = "${cfg.customDir}/public/assets/img/logo.svg";
+            }
+            {
+              src = "${icon}";
+              dest = "${cfg.customDir}/public/assets/img/favicon.svg";
+            }
+          ];
+
+        in
+        (lib.genAttrs dirs (_: {
+          d = {
+            inherit (cfg) user group;
+            mode = "0750";
+          };
+        }))
+        // (
+          files
+          |> map ({ src, dest }: lib.nameValuePair dest { "L+".argument = src; })
+          |> builtins.listToAttrs
+        );
     };
 }
