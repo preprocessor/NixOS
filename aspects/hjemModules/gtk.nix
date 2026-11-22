@@ -1,5 +1,5 @@
 {
-  modules.core = 
+  modules.core =
     {
       lib,
       pkgs,
@@ -118,8 +118,6 @@
             }
           ];
         };
-
-        gtk.iconCache.enable = true;
 
         fonts = {
           fontDir.enable = true;
