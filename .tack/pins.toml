@@ -64,11 +64,6 @@ url = "gh:iynaix/fish-completion-sync"
 group = "tui"
 type = "fetch"
 
-[inputs.forgejo-terminal-theme]
-url = "git+https://codeberg.org/ivanhercaz/forgejo-terminal-theme.git"
-frozen = true
-type = "fetch"
-
 [inputs.fragment-mono]
 url = "gh:dtinth/fragment-mono-weights"
 frozen = true
@@ -99,6 +94,13 @@ url = "gh:preprocessor/hypr-motif"
 [inputs.lithic]
 url = "gh:NotAShelf/lithic"
 group = "gaming"
+
+[inputs.mddog]
+url = "gh:qu8n/mddog/issue-20-add-linux-support"
+frozen = true
+group = "cli"
+patches = ["https://gist.githubusercontent.com/onelocked/10889b2ce08bd001867958980ef05679/raw/b13c78ccbb9e69a402ae7f89fbb7b35bfeba9ff4/mddog-mardown-fix.patch"]
+type = "fetch"
 
 [inputs.nixos-core]
 url = "gh:manic-systems/nixos-core"
