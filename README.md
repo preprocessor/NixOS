@@ -147,8 +147,8 @@ wrapPackage (
 The `files` argument is a way to reference paths of files generated inside the wrapper.
 In the above example we create `files.theme` with its path set to `"config/theme.yml"`, we also use the files argument to set `EZA_CONFIG_DIR` to `files.theme.dir`.
 
+- `files.<name>` gives the path of the file.
 - `files.<name>.dir` gives the path of the file's parent directory.
-- `files.<name>` gives the path of the actual file.
 - `files.<name>.name` gives the name (basename) of the file.
 
 ### Wlib
@@ -233,7 +233,8 @@ So enabling a feature on a configuration is one word, not a copy-paste of config
   };
 }
 ```
-This will receive the following modules:
+This will create a new host (ramiel), sets the host's stateVersion, colorscheme, and hardware profile.
+This host would receive the following modules;
 ```
 modules.core
 modules.hardware.desktop-pc
