@@ -37,6 +37,7 @@
     "tack": "github:manic-systems/tack",
     "tiny5-mono": "github:Gissio/font_Tiny5Mono",
     "vintage-story-nix": "github:PierreBorine/vintagestory-nix",
+    "wxyz": "git+https://git.wyspr.xyz/preprocessor/wxyz",
     "yazi-fuzzy-search": "github:onelocked/fuzzy-search.yazi",
     "yazi-no-header": "github:onelocked/no-header-prompt.yazi",
     "yazi-plugin-cbz": "github:AminurAlam/yazi-plugins",
@@ -412,6 +413,14 @@
     "narHash": "sha256-Tb+yQptom1ZZLVmIDjXwXy6rflQ1WP+FhLFveQzPXIE=",
     "lastModified": 1795131994,
     "public": true
+  },
+  "wxyz": {
+    "type": "git",
+    "url": "https://git.wyspr.xyz/preprocessor/wxyz",
+    "ref": "HEAD",
+    "rev": "ca5ab20775ffba27f61797fe42e478ab4009e3a4",
+    "narHash": "sha256-gJKprj3bSPrk9wWMCoa5dv8039f8Dzry106p0DytKcc=",
+    "lastModified": 1795742462
   },
   "yazi-fuzzy-search": {
     "type": "github",

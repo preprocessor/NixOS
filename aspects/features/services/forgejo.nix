@@ -4,6 +4,9 @@
     type = "fetch";
     frozen = true;
   };
+
+  tack.shorturls.xyz = "git+https://git.wyspr.xyz/preprocessor/{path}";
+
   modules.host.xyz =
     {
       inputs,

@@ -11,6 +11,7 @@ names = ["flake-compat","pre-commit-hooks","treefmt-nix"]
 applefont = "https://devimages-cdn.apple.com/design/resources/download/{path}.dmg"
 gh = "github:{path}"
 nixpkgs = "github:NixOS/nixpkgs/nixpkgs-{path}"
+xyz = "git+https://git.wyspr.xyz/preprocessor/{path}"
 
 [inputs.attic-ui]
 url = "gh:kleinbem-dev/attic-ui"
@@ -186,6 +187,9 @@ type = "fetch"
 [inputs.vintage-story-nix]
 url = "gh:PierreBorine/vintagestory-nix"
 group = "gaming"
+
+[inputs.wxyz]
+url = "xyz:wxyz"
 
 [inputs.yazi-fuzzy-search]
 url = "gh:onelocked/fuzzy-search.yazi"
