@@ -28,6 +28,10 @@
     {
       programs.nano.enable = lib.mkForce false; # Take out the trash
 
+      environment.systemPackages = [
+        pkgs.dix
+      ];
+
       hj.packages =
         with pkgs;
         [
