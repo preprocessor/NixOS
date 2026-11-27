@@ -112,7 +112,6 @@
 
       hj.packages = with pkgs; [
         dualsensectl # Dualsense Controller
-        protonup-rs
         ckan # KSP mod loader
         me3
       ];

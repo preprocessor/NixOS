@@ -26,6 +26,8 @@
     "nixvim": "github:nix-community/nixvim",
     "ny": "https://devimages-cdn.apple.com/design/resources/download/NY.dmg",
     "pixprint": "github:preprocessor/pixprint",
+    "proton-cachyos": "https://github.com/CachyOS/proton-cachyos/releases/download/{tag}/proton-cachyos-{version}-slr-x86_64_v3.tar.xz",
+    "proton-ge": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/{tag}/{tag}-x86_64.tar.gz",
     "rsakura": "github:preprocessor/rsakura",
     "sf-compact": "https://devimages-cdn.apple.com/design/resources/download/SF-Compact.dmg",
     "sf-mono": "https://devimages-cdn.apple.com/design/resources/download/SF-Mono.dmg",
@@ -293,6 +295,22 @@
     "narHash": "sha256-c41Mzol6LXxWJsRf0HzSJGsk4TRFNG5+udSV7sknBHo=",
     "lastModified": 1778293486
   },
+  "proton-cachyos": {
+    "type": "fixed",
+    "url": "https://github.com/CachyOS/proton-cachyos/releases/download/cachyos-11.0-20261015-slr/proton-cachyos-11.0-20261015-slr-x86_64_v3.tar.xz",
+    "sha256": "sha256-TxJb19LHJNx9LQVTykLxjGcCKmAG6GKf5/eNFgqevfs=",
+    "unpack": "tarball",
+    "tag": "cachyos-11.0-20261015-slr",
+    "version": "11.0-20261015"
+  },
+  "proton-ge": {
+    "type": "fixed",
+    "url": "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/GE-Proton11-14/GE-Proton11-14-x86_64.tar.gz",
+    "sha256": "sha256-JrzqMyS2je5ov2ubAF9EJc25wphy4SbXkN9av+vjMqg=",
+    "unpack": "tarball",
+    "tag": "GE-Proton11-14",
+    "version": "11-14"
+  },
   "rsakura": {
     "type": "github",
     "owner": "preprocessor",
@@ -418,9 +436,9 @@
     "type": "git",
     "url": "https://git.wyspr.xyz/preprocessor/wxyz",
     "ref": "HEAD",
-    "rev": "f9496a87baca83832423b510545acf2eabca47cc",
-    "narHash": "sha256-267sfUE+4WX+5paCO/wC9AocraPpWgIYS1ncSwsHZ0s=",
-    "lastModified": 1795745679
+    "rev": "97514b99603325c3fb53e7e9248c9417b3dd6b39",
+    "narHash": "sha256-008oBEUJqAQ3z3XIZAwbCGOHU7l36tq66oQtT6L4H1A=",
+    "lastModified": 1795797160
   },
   "yazi-fuzzy-search": {
     "type": "github",

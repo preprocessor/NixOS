@@ -134,6 +134,20 @@ type = "fixed"
 url = "gh:preprocessor/pixprint"
 group = "tui"
 
+[inputs.proton-cachyos]
+url = "https://github.com/CachyOS/proton-cachyos/releases/download/{tag}/proton-cachyos-{version}-slr-x86_64_v3.tar.xz"
+group = "gaming"
+tag = "cachyos-{version}-slr"
+type = "fixed"
+unpack = "tarball"
+
+[inputs.proton-ge]
+url = "https://github.com/GloriousEggroll/proton-ge-custom/releases/download/{tag}/{tag}-x86_64.tar.gz"
+group = "gaming"
+tag = "GE-Proton{version}"
+type = "fixed"
+unpack = "tarball"
+
 [inputs.rsakura]
 url = "gh:preprocessor/rsakura"
 group = "tui"
