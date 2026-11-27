@@ -19,10 +19,6 @@
           with pkgs;
           [
             {
-              url = "*.md";
-              run = ''piper -- CLICOLOR_FORCE=1 ${getExe glow} -w=$w -s=dark -- "$1"'';
-            }
-            {
               mime = "text/*";
               run = ''piper -- ${bat} "$1"'';
             }
