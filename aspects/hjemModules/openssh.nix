@@ -8,7 +8,7 @@
     let
       cfg = config.my.openssh;
 
-      scalar =
+      leaf =
         with lib.types;
         oneOf [
           str
@@ -17,12 +17,12 @@
         ];
 
       # Recursive freeform type: blocks are nested attrsets all the way down,
-      # with scalar leaves. No submodules.
+      # ending in leaves.
       value =
         with lib.types;
         oneOf [
-          scalar
-          (listOf scalar)
+          leaf
+          (listOf leaf)
           (attrsOf value)
         ];
 
