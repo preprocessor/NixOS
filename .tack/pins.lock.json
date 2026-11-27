@@ -418,9 +418,9 @@
     "type": "git",
     "url": "https://git.wyspr.xyz/preprocessor/wxyz",
     "ref": "HEAD",
-    "rev": "ca5ab20775ffba27f61797fe42e478ab4009e3a4",
-    "narHash": "sha256-gJKprj3bSPrk9wWMCoa5dv8039f8Dzry106p0DytKcc=",
-    "lastModified": 1795742462
+    "rev": "f9496a87baca83832423b510545acf2eabca47cc",
+    "narHash": "sha256-267sfUE+4WX+5paCO/wC9AocraPpWgIYS1ncSwsHZ0s=",
+    "lastModified": 1795745679
   },
   "yazi-fuzzy-search": {
     "type": "github",
