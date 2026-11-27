@@ -9,7 +9,6 @@
           editor = "$EDITOR";
           pager = "hunk pager";
           excludesfile = "${pkgs.writeText "gitignore-global" ''
-            .envrc
             .direnv
             result*
           ''}";
