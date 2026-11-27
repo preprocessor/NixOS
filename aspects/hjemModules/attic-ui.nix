@@ -45,12 +45,7 @@
             name = "attic-ui";
             paths = [
               inputs'.attic-ui.packages.attic-ui
-              (pkgs.runCommand "attic-ui-runtime-config" { } (
-                let
-                  config = pkgs.writeText "attic-ui-config.json" (builtins.toJSON cfg.settings);
-                in
-                /* bash */ ''install -D "${config}" "$out/config.json"''
-              ))
+              (pkgs.writeTextDir "config.json" (builtins.toJSON cfg.settings))
             ];
           };
         };
