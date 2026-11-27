@@ -11,6 +11,7 @@
     "equicord": "github:Equicord/Equicord",
     "extra-metadata": "github:boydaihungst/file-extra-metadata.yazi",
     "fish-completion-sync": "github:iynaix/fish-completion-sync",
+    "forgejo-terminal-theme": "git+https://codeberg.org/ivanhercaz/forgejo-terminal-theme.git",
     "fragment-mono": "github:dtinth/fragment-mono-weights",
     "gist-nvim": "github:rawnly/gist.nvim",
     "helium": "github:amaanq/helium-flake",
@@ -63,9 +64,10 @@
     "type": "github",
     "owner": "manic-systems",
     "repo": "cade",
-    "rev": "249ef691155259f0f345e80ed28390755f3d9be3",
-    "narHash": "sha256-Uky5jpgAijchZhsYNtk67JlO3zPeZJnX3Hi4c92W8ko=",
-    "lastModified": 1793784182
+    "rev": "d1eb4fa146cc9a6ab08a636868bf1d830b327bd4",
+    "narHash": "sha256-OthKDEs7meVsVSD2I53cJfm2GzwPWzc/3JCBCNLBzdc=",
+    "lastModified": 1795426417,
+    "public": true
   },
   "chicago-font": {
     "type": "github",
@@ -148,6 +150,14 @@
     "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
     "lastModified": 1731533236
   },
+  "forgejo-terminal-theme": {
+    "type": "git",
+    "url": "https://codeberg.org/ivanhercaz/forgejo-terminal-theme.git",
+    "ref": "HEAD",
+    "rev": "f32dab9f462eaa4fa81281b51495a8498a1822be",
+    "narHash": "sha256-M9aGXmlngj6QcXSy3O4Jxz20b6PTv6PSENoBlMwqPJE=",
+    "lastModified": 1783819597
+  },
   "fragment-mono": {
     "type": "github",
     "owner": "dtinth",
@@ -172,9 +182,10 @@
     "type": "github",
     "owner": "amaanq",
     "repo": "helium-flake",
-    "rev": "698f12b0a5b93aa2c6b582779bdb683f0d8692a3",
-    "narHash": "sha256-dteS+YYEOrbYupP9U8EvYxBNTTlf4Lup0ji51ubGv+I=",
-    "lastModified": 1794597681
+    "rev": "b13d85a06c1c4c189504cc9da87790541d096698",
+    "narHash": "sha256-r5RpoYZOwd5y+LwcveGzMNNuapXIK6dSOqb9tXOD4KA=",
+    "lastModified": 1795446590,
+    "public": true
   },
   "helvetica-font": {
     "type": "github",
@@ -262,9 +273,10 @@
     "type": "github",
     "owner": "nix-community",
     "repo": "nixvim",
-    "rev": "453dc9c5037e6d1bec81d2a51ddacd58a2f44e9c",
-    "narHash": "sha256-yJ072hxngo/srNdLTp4BlFeo0hedwnKicI3TGlSXLFE=",
-    "lastModified": 1792203519
+    "rev": "b67578f451bd779e79ec42f8153a403421a4b266",
+    "narHash": "sha256-1d33ym1V/UxX9pcNbrpG0/P8riFHE8VuVAc3T8WN52I=",
+    "lastModified": 1794943345,
+    "public": true
   },
   "ny": {
     "type": "fixed",
@@ -327,29 +339,31 @@
     "type": "github",
     "owner": "Gerg-L",
     "repo": "spicetify-nix",
-    "rev": "13e6fed4eb99f809d390fb50f591bed6cb716dc0",
-    "narHash": "sha256-a+za5QCDlOe/PsuMlZiBcQ13cyiyOscK17BAJFu1/dE=",
-    "lastModified": 1793662659
+    "rev": "5bbd2930ff14300a9d90008003d37fe5baa4dd4d",
+    "narHash": "sha256-ehnFBWuqh6wzu7CtBlKBZJt/qxWugEFLNSu2tNPjC3c=",
+    "lastModified": 1795350154,
+    "public": true
   },
   "sxyazi": {
     "type": "github",
     "owner": "sxyazi",
     "repo": "yazi",
-    "rev": "d5e4beb6b5212c28d1026d8e7d4ae985dcf174cb",
-    "narHash": "sha256-shsRyY1D1CLCODB1FXbpv1L+sT6QnlRPb1u0ffxlc2U=",
-    "lastModified": 1794489933
+    "rev": "af6850648e34bb9276d08965e1886fe8497c0734",
+    "narHash": "sha256-konbeFEasIkiDmg4TNWuWtrXRxGXoQh+J22jg2OPOH8=",
+    "lastModified": 1795374092,
+    "public": true
   },
   "systemctl-tui": {
     "type": "github",
     "owner": "rgwood",
     "repo": "systemctl-tui",
-    "rev": "053e865b549c5d3604c348ed7a2e68ce7cd6deca",
-    "narHash": "sha256-fQaGaasX5NDSYpLPYb7gUD9G2n9oSKE9mAwZMgFpaHg=",
-    "lastModified": 1793559810,
+    "rev": "e03d1f0790d5fd7f4396f9d3ed13b4b230d6bb2e",
+    "narHash": "sha256-IcnCL9v4JQUn+5YhqlqBNUBidA1bd1Uu7nAtgqeLp9k=",
+    "lastModified": 1794365610,
     "patched": {
-      "path": "/nix/store/af98sizfh6qli702ahbp81jjz50qc6af-source",
-      "narHash": "sha256-0uZ+SJcBo9IgjNinCMZFiKNLNuqTJt7kBRg6Tl7KXKk=",
-      "lastModified": 1793559810,
+      "path": "/nix/store/rln0ai3ny844vdngazq6dk4ynrs6nap4-source",
+      "narHash": "sha256-Dh5WwUUlCuHYWvi2AVA3tF0enwnHa0gYfuEUfI4K8t0=",
+      "lastModified": 1794365610,
       "patches": [
         {
           "source": "https://gist.githubusercontent.com/preprocessor/9cfc416aef8684374849a14284639be9/raw/5447789e89192e5ec6acdb959f88a20d0cbbd5a6/systemctl-tui_square_borders.patch",
@@ -394,9 +408,10 @@
     "type": "github",
     "owner": "PierreBorine",
     "repo": "vintagestory-nix",
-    "rev": "5353839b03bd8aaa18d0fc1e3e04c7f8dd5bf1f0",
-    "narHash": "sha256-3KEB/yZKGkqBU7BtzrTq7kMWzp16NHI0bItZZdDbAMI=",
-    "lastModified": 1792146607
+    "rev": "b789a886eea641bf7d9ec455e722fcef95edaf4a",
+    "narHash": "sha256-Tb+yQptom1ZZLVmIDjXwXy6rflQ1WP+FhLFveQzPXIE=",
+    "lastModified": 1795131994,
+    "public": true
   },
   "yazi-fuzzy-search": {
     "type": "github",
@@ -418,13 +433,14 @@
     "type": "github",
     "owner": "AminurAlam",
     "repo": "yazi-plugins",
-    "rev": "937ae3b151155f9c571c51b8ee5f43115d3872c7",
-    "narHash": "sha256-Sc452SDksieYR85wpXpE4h35Ijomm3OPlMuWNCbu6rI=",
-    "lastModified": 1794051266,
+    "rev": "aebeaa7eec76f7a22e1218b5c4841ab87acd56da",
+    "narHash": "sha256-iPe0BlQSY9/qnklwL2WyaDh2jCCIDEUREXI9l3h6IAQ=",
+    "lastModified": 1794318995,
     "archive": {
-      "hash": "sha256-O30P8RTAoDNcwFux/FgT8qH/xNF7m+jITPcZqQY6QQU=",
-      "outHash": "sha256-Aval19f2Kgvvq/pfteYEwnhzpsaEXC8R5zWntJEE40g="
-    }
+      "hash": "sha256-PMs5wVOxxkRmG2cOLD3ybmEpaTDDUHkgNfhTc3GmTqU=",
+      "outHash": "sha256-BjfH+/+Naw0duPHPevoSvM/pV6JS+3TtQ5O1FQPQ+GI="
+    },
+    "public": true
   },
   "yazi-plugins": {
     "type": "github",

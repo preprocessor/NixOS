@@ -64,6 +64,11 @@ url = "gh:iynaix/fish-completion-sync"
 group = "tui"
 type = "fetch"
 
+[inputs.forgejo-terminal-theme]
+url = "git+https://codeberg.org/ivanhercaz/forgejo-terminal-theme.git"
+frozen = true
+type = "fetch"
+
 [inputs.fragment-mono]
 url = "gh:dtinth/fragment-mono-weights"
 frozen = true

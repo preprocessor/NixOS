@@ -1,4 +1,9 @@
 {
+  tack.inputs.forgejo-terminal-theme = {
+    url = "git+https://codeberg.org/ivanhercaz/forgejo-terminal-theme.git";
+    type = "fetch";
+    frozen = true;
+  };
   modules.host.xyz =
     {
       inputs,
